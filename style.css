@@ -1,0 +1,284 @@
+/* a minimalist set of CSS resets */
+@font-face {
+    font-family: KyotoTW;
+    src: url(https://cdn.glitch.me/4c57ad64-eefd-481f-8bac-daf0934060be%2FKyotoTW-Text600.otf?v=1635354803283) format("opentype");
+}
+
+.css-selector {
+    background: linear-gradient(0deg, #00f9b9, #f9bd00, #00e1f9, #f98bf0, #be8bf9, #f98ba2, #f9a98b);
+    background-size: 1400% 1400%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  padding: 0rem 5%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f9fcc2;
+}
+
+header {
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Microsite General Styling */
+
+/* Navigation */
+nav {
+  position: fixed;
+  left: 50%;
+  width: fit-content;
+  padding: 0px 10px;
+  background-color: pink;
+  transform: translateX(-50%);
+}
+
+nav a {
+  margin-right: 10px;
+}
+
+a, strong, em {
+      font-family: KyotoTW;
+}
+/* Headings  */
+h1, h2,h3, h4,h5,h6, th {
+  text-align:center;
+  font-family: KyotoTW;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+h4+p {
+  margin-top: 0px
+}
+
+/* Instructions */
+ol li{
+  text-decoration: underline;
+}
+
+ul li {
+  text-decoration: none !important;
+}
+
+ul p {
+  margin-bottom: 0;
+}
+
+li + p {
+  margin-top: 0px;
+  padding-left: 20px;
+}
+
+/* Accordion  */
+details > summary {
+  list-style:h
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {outline:0;}
+
+/* Homework Table */
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+
+/* Classes */
+.module {
+  padding-bottom: 30px;
+}
+
+.agenda-pages {
+    padding: 0 !important; 
+  margin: 0;
+  margin-top: 1em;
+}
+
+.module section, .module hr {
+  margin: 1rem 5%;
+}
+
+.homework {
+  padding-top: 10px;
+}
+
+/* Week 6 styles */
+#w6 {
+  background-color: pink;
+}
+#w6 nav {
+  background-color: yellow;
+}
+#w6 .homework {
+  background-color: aqua;
+}
+
+#w6 .break {
+  color: yellow;
+}
+
+#w6 table, th, td {
+  border-color: pink
+}
+
+
+/* Week 7 styles */
+#w7 {
+  background-color: lightGreen;
+}
+#w7 nav {
+  background-color: moccasin;
+}
+#w7 .homework {
+  background-color: lightSkyBlue;
+}
+
+#w7 .break {
+  color: moccasin;
+}
+
+#w7 table, th, td {
+  border-color: lightGreen;
+}
+
+td p {
+  text-align:center;
+}
+
+
+p + ul {
+  margin-top: 0;
+}
+
+/* Week 8 styles */
+#w8 {
+  background-color: LightCoral;
+}
+#w8 nav {
+  background-color: PowderBlue;
+}
+#w8 .homework {
+  background-color: LightGreen;
+}
+
+#w8 .break {
+  color: PowderBlue;
+}
+
+#w8 table, th, td {
+  border-color: black;
+}
+
+/* Week 8 styles */
+#w9 {
+  background-color: Plum;
+}
+#w9 nav {
+  background-color: DodgerBlue;
+}
+#w9 .homework {
+  background-color: GhostWhite;
+}
+
+#w9 .break {
+  color: DodgerBlue;
+}
+
+#w9 table, th, td {
+  border-color: black;
+}
+
+#flyer a {
+    color:  red;
+}
+
+#flyer h5 {
+  text-align: left;
+  margin-bottom: 0em;
+}
+
+#flyer h5 + p {
+  margin-top: 0em;
+}
+
+#flyer section {
+  display:grid; 
+  grid-template-columns: auto auto;
+}
+
+#flyer section ol {
+  padding-left: 0;
+  list-style-type:none;
+}
+
+#flyer section ol li {
+  text-decoration: none !important;
+}
+
+#flyer section div {
+  padding: 10px;
+}
+
+#flyer section div section div {
+  padding: 0px;
+}
+#preview {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  #flyer section {
+  display:grid; 
+  grid-template-columns: auto;
+}
+}
+
+
